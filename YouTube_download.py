@@ -5,18 +5,12 @@ import os
 from threading import Thread
 from bs4 import BeautifulSoup
 import requests
-import platform
-import getpass
 
 
 song_name = None
 
 def get_directory():
-    username = getpass.getuser()
-    if platform.system() == "Linux":
-        directory = f"/home/{username}/Downloads"
-    else:
-        directory = f"C:\\Users\{username}\\Downloads"
+    directory = os.path.expanduser("~") + "/Downloads"
     return directory
 
 def get_song_name(url):
@@ -38,8 +32,8 @@ def load_animation():
         sys.stdout.write('\rloading \\')
         time.sleep(0.1)
         if str(song_name) + ".mp4" in os.listdir(get_directory()):
-            sys.stdout.write('\rDone!     ')
-            print(f"The file was saved in your Downloads directory as: {song_name}")
+            sys.stdout.write('\rDone!')
+            print(f"\nThe file was saved in your Downloads directory as: {song_name}")
             print("\nThis script was made by Exotic Maor!!")
             exit(0)
 
