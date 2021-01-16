@@ -1,0 +1,5 @@
+pytube
+bs4
+requests
+platform
+getpass
