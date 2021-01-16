@@ -40,7 +40,7 @@ def load_animation():
         if str(song_name) + ".mp4" in os.listdir(get_directory()):
             sys.stdout.write('\rDone!     ')
             print(f"The file was saved in your Downloads directory as: {song_name}")
-            print("\nThis script was made by MAOR SABAG!!")
+            print("\nThis script was made by Exotic Maor!!")
             exit(0)
 
 def downloader(url):
