@@ -8,7 +8,7 @@ from threading import Thread
 song_name = None
 
 def loading():
-    easygui.msgbox("Please be patient download as started....", title="YouTube Downloader - Maor")
+    easygui.msgbox("Please be patient,\n The download has started....", title="YouTube Downloader - Maor")
     while 1:
         if str(song_name) + ".mp4" in os.listdir(get_directory()):
             easygui.msgbox(f"The File has been downloaded successfuly as: {song_name} at you Downloads folder", title="YouTube Downloader - Maor")
