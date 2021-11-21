@@ -28,7 +28,7 @@ def get_song_name(url):
 
 
 def downloader(url):
-    yt = YouTube(url).streams.first().download(get_directory(),filename=song_name)
+    yt = YouTube(url).streams.first().download(get_directory(),filename=song_name+".mp4")
 
 
 def main():
